@@ -1,12 +1,25 @@
 public class Time {
-    public int hour;
-    public int minute;
-    public int second;
+    private int hour;
+    private int minute;
+    private int second;
 
     public Time(int hour, int minute, int second) {
-        this.hour = hour;
-        this.minute = minute;
-        this.second = second;
+        if(hour>=0 && hour < 24){
+            this.hour = hour;
+        }
+        else{
+            this.hour = 0;
+        }
+        if(minute >=0 && minute <60){
+            this.minute = minute;
+    }
+        else{
+            this.minute = 0;
+        }
+        if(second >=0 && second <60){
+            this.second = second;
+        }
+        else{ this.second = 0;}
     }
 
     public int getHour() {
@@ -35,10 +48,34 @@ public class Time {
     public String toString(){
         return String.format("%02d:%02d:%02d", hour, minute, second);
     }
-    public Time netxSecond(){
-        return new Time(hour, minute, second+1);
+    public Time nextSecond(){
+        second++;
+        if(second ==60){
+            second = 0;
+            minute++;
+        }
+        if(minute ==60){
+            minute = 0;
+            hour++;
+        }
+        if(hour ==24){
+            hour = 0;
+        }
+        return this;
     }
     public Time previousSecond(){
-        return new Time(hour , minute, second-1);
+        second--;
+        if(second ==-1){
+            second = 59;
+            minute--;
+        }
+        if(minute ==-1){
+            minute = 59;
+            hour--;
+        }
+        if(hour ==-1){
+            hour = 23;
+        }
+        return this;
     }
 }

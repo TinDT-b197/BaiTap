@@ -14,8 +14,8 @@ public class TestMain {
         t1.setTime(23,59,58);
         System.out.println(t1);
 
-        System.out.println(t1.netxSecond());
-        System.out.println(t1.netxSecond().netxSecond());
+        System.out.println(t1.nextSecond());
+        System.out.println(t1.nextSecond().nextSecond());
 
         System.out.println(t1.previousSecond());
         System.out.println(t1.previousSecond().previousSecond());
