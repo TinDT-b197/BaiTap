@@ -2,23 +2,33 @@ public class Main {
     public static void main(String[] args) {
 
 
-        MyPoint p1 = new MyPoint();  // Test constructor
-        System.out.println(p1);      // Test toString()
-        p1.setX(8);   // Test setters
+        MyPoint p1 = new MyPoint();
+        System.out.println(p1);
+        p1.setX(8);
         p1.setY(6);
-        System.out.println("x is: " + p1.getX());  // Test getters
+        System.out.println("x is: " + p1.getX());
         System.out.println("y is: " + p1.getY());
-        p1.setXY(3, 0);   // Test setXY()
-        System.out.println(p1.getXY()[0]);  // Test getXY()
+        p1.setXY(3, 0);
+        System.out.println(p1.getXY()[0]);
         System.out.println(p1.getXY()[1]);
         System.out.println(p1);
 
-        MyPoint p2 = new MyPoint(0, 4);  // Test another constructor
+        MyPoint p2 = new MyPoint(0, 4);
         System.out.println(p2);
-// Testing the overloaded methods distance()
-        System.out.println(p1.distance(p2));    // which version?
-        System.out.println(p2.distance(p1));    // which version?
-        System.out.println(p1.distance(5, 6));  // which version?
+
+        System.out.println(p1.distance(p2));
+        System.out.println(p2.distance(p1));
+        System.out.println(p1.distance(5, 6));
         System.out.println(p1.distance());
+
+        //Test MyLine
+
+    MyLine l2 = new MyLine(2, 3, 4, 5);
+    System.out.println(l2);
+    l2.setBeginXY(2, 4);
+    l2.setEndXY(3, 4);
+    System.out.println(l2);
+    System.out.println(l2.getGradient());
+    System.out.println(l2.getLength());
     }
 }
