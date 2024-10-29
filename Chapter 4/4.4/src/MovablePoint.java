@@ -29,13 +29,19 @@ public class MovablePoint extends Point {
         this.ySpeed = ySpeed;
     }
     public float[] getSpeed(){
-        return new float[]{xSpeed, ySpeed};
+        float[] result = new float[2];
+        result[0] = xSpeed;
+        result[1] = ySpeed;
+        return result;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " Speed=( " + xSpeed + " ySpeed: " + ySpeed+")";
+        return super.toString() + " Speed=( " + xSpeed + ySpeed+")";
     }
     public MovablePoint move(){
+        setX(getX() + xSpeed);
+        setY(getY() + ySpeed);
+        return this;
     }
 }
