@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="796.0" prefWidth="896.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cuoiki.ControllerDashboard">
+    <children>
+      <AnchorPane layoutX="8.0" layoutY="1.0" prefHeight="794.0" prefWidth="933.0">
+         <children>
+            <Text fx:id="user_name" layoutX="42.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi, Tin">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="57.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Account">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <HBox layoutX="20.0" layoutY="150.0" prefHeight="177.0" prefWidth="564.0">
+               <children>
+                  <AnchorPane prefHeight="177.0" prefWidth="280.0">
+                     <children>
+                        <Label fx:id="checking_bal" layoutX="26.0" layoutY="28.0" text="5432,13 VND" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="28.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="125.0" text="**** **** ****" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
+                        <Label fx:id="checking_acc_num" layoutX="83.0" layoutY="115.0" text="9999" />
+                        <FontAwesomeIcon glyphName="BANK" layoutX="249.0" layoutY="36.0" size="25" />
+                        <Text layoutX="14.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checking Account" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="177.0" prefWidth="306.0">
+                     <children>
+                        <Label fx:id="saving_bal" layoutX="14.0" layoutY="14.0" text="5432,13 VND" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="25.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="125.0" text="**** **** ****" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="14.0" />
+                        <Label fx:id="saving_acc_num" layoutX="84.0" layoutY="115.0" text="9999" />
+                        <FontAwesomeIcon glyphName="BANK" layoutX="256.0" layoutY="33.0" size="25" />
+                        <Text layoutX="14.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saving Account" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Text layoutX="35.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lastest  Transactions">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ListView fx:id="transactions_list" layoutX="35.0" layoutY="373.0" prefHeight="379.0" prefWidth="536.0" />
+            <Text layoutX="637.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sent Money">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="746.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Summary">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <VBox layoutX="648.0" layoutY="150.0" prefHeight="177.0" prefWidth="293.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Income" />
+                  <Label fx:id="Income_lbl" text="+ 120.000 VND" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Expenses" />
+                  <Label fx:id="Expenses_lbl" text="- 390.000 VND" />
+               </children>
+            </VBox>
+            <VBox layoutX="609.0" layoutY="373.0" prefHeight="379.0" prefWidth="309.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="93.0" text="Payee Address" />
+                  <TextField fx:id="payee_address" prefHeight="34.0" prefWidth="309.0" />
+                  <Label prefHeight="17.0" prefWidth="93.0" text="Amount(VND)" />
+                  <TextField fx:id="amount_sent" prefHeight="32.0" prefWidth="309.0" />
+                  <Label prefHeight="17.0" prefWidth="128.0" text="Message(Optional)" />
+                  <TextField fx:id="message" prefHeight="133.0" prefWidth="309.0" />
+                  <Button fx:id="sent_money" mnemonicParsing="false" prefHeight="82.0" prefWidth="306.0" text="Sent Money" />
+               </children>
+            </VBox>
+            <Label fx:id="login_date" layoutX="756.0" layoutY="42.0" text="Today, 14-12-2024">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

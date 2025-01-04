@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.ControllerApp">
+   <children>
+      <Label layoutX="46.0" layoutY="23.0" prefHeight="25.0" prefWidth="65.0" text="Họ và Tên" />
+      <Label layoutX="47.0" layoutY="77.0" prefHeight="25.0" prefWidth="65.0" text="Ngày sinh" />
+      <Label layoutX="61.0" layoutY="140.0" prefHeight="25.0" prefWidth="34.0" text="SDT" />
+      <Label layoutX="53.0" layoutY="187.0" prefHeight="25.0" prefWidth="49.0" text="Ghi chú" />
+      <TextField fx:id="Name" layoutX="157.0" layoutY="19.0" prefHeight="33.0" prefWidth="164.0" />
+      <TextField fx:id="Year" layoutX="157.0" layoutY="73.0" prefHeight="33.0" prefWidth="164.0" />
+      <TextField fx:id="Sdt" layoutX="157.0" layoutY="124.0" prefHeight="33.0" prefWidth="164.0" />
+      <TextField fx:id="Note" layoutX="157.0" layoutY="183.0" prefHeight="33.0" prefWidth="164.0" />
+      <Button layoutX="157.0" layoutY="250.0" mnemonicParsing="false" onAction="#XacNhan" text="Xác nhận" />
+      <Button layoutX="256.0" layoutY="250.0" mnemonicParsing="false" onAction="#goBack" text="Trở về" />
+   </children>
+</AnchorPane>
