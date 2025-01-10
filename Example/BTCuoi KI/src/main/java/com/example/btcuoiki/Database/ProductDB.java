@@ -61,7 +61,6 @@ public class ProductDB implements DAO<Product> {
                     ",Price='"+product.getPrice()+"'"+
                     ",Quantity="+product.getQuantity()+
                     " WHERE productID='"+product.getProductID()+"\'";
-                    ;
             System.out.println(sql);
             int result = st.executeUpdate(sql);
 
@@ -69,8 +68,6 @@ public class ProductDB implements DAO<Product> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
         return 0;
     }
 
@@ -86,11 +83,11 @@ public class ProductDB implements DAO<Product> {
             ResultSet rs = st.executeQuery(sql);
 
             while(rs.next()) {
-                String id = rs.getString("productID");
-                String name = rs.getString("productName");
-                String price = rs.getString("Price");
-                int quantity = rs.getInt("Quantity");
-                Product product = new Product(id,name,price,quantity);
+                Product product = new Product();
+                product.setProductID(rs.getString("productID"));
+                product.setProductName(rs.getString("productName"));
+                product.setPrice(rs.getString("Price"));
+                product.setQuantity(rs.getInt("Quantity"));
                 result.add(product);
             }
 

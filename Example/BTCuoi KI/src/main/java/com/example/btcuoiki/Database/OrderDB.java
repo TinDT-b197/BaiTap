@@ -3,10 +3,7 @@ package com.example.btcuoiki.Database;
 import com.example.btcuoiki.Order;
 
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class OrderDB implements DAO<Order> {
@@ -62,6 +59,7 @@ public class OrderDB implements DAO<Order> {
                     " NameCustomer='"+order.getNameCustomer()+"'"+
                     ",Phone='"+ order.getPhone()+"'"+
                     ",ProductIdOr='"+order.getProductIdOr()+"'"+
+                    ",ProductNameOrder='"+order.getProductNameOrder()+"'"+
                     ", QuantityOrder="+order.getQuantityOrder()+
                     " WHERE Id='"+order.getId()+"\'";
             ;
@@ -103,5 +101,4 @@ public class OrderDB implements DAO<Order> {
         }
         return result;
     }
-
 }
